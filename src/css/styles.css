@@ -17,9 +17,4 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  color: #212223;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
