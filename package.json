@@ -1,8 +1,12 @@
 {
   "devDependencies": {
+    "@tsconfig/svelte": "^2.0.1",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
-    "svelte": "^3.43.1"
+    "svelte": "^3.43.1",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.9.8",
+    "typescript": "^4.4.3"
   },
   "browserslist": [
     "last 1 chrome versions"
