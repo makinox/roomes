@@ -1,12 +1,12 @@
 <script lang="ts">
   import { FluidContainer } from '@makinox/makinox-ui';
+  import CardArtitcle from '../CardArtitcle/CardArtitcle.svelte';
 </script>
 
-<section class={FluidContainer()}>
-  <article>pane</article>
-  <article>pane</article>
-  <article>pane</article>
-  <article>pane</article>
+<section class={`flex justify-between ${FluidContainer()}`}>
+  <CardArtitcle title="Panela" />
+  <CardArtitcle title="Sal" />
+  <CardArtitcle title="Carton" />
 </section>
 
 <style>
