@@ -15,5 +15,8 @@
     "dev": "parcel config/index.html",
     "start": "parcel config/index.html",
     "build": "parcel build config/index.html"
+  },
+  "dependencies": {
+    "@makinox/makinox-ui": "^1.5.2"
   }
 }
