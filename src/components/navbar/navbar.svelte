@@ -1,6 +1,5 @@
 <script lang="ts">
   import { FluidContainer } from '@makinox/makinox-ui';
-  console.log('navbar');
 </script>
 
 <header class={FluidContainer()}>
