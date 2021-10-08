@@ -2,10 +2,11 @@
   import './css/colors.css';
   import '@makinox/makinox-ui/dist/index.css';
 
-  import Navbar from './components/navbar/navbar.svelte';
+  import Nav from './components/Nav/Nav.svelte';
   import ListContainer from './components/ListContainer/ListContainer.svelte';
+  import PageActions from './components/PageActions/PageActions.svelte';
 </script>
 
-<Navbar />
-
+<Nav />
 <ListContainer />
+<PageActions />
