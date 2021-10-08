@@ -1,11 +1,13 @@
 <script lang="ts">
   import { ButtonOutline } from '@makinox/makinox-ui';
+
+  import { isDark } from '../../data/store';
 </script>
 
 <section class="flex justify-center">
   <div class="flex justify-between">
-    <button class={ButtonOutline()}>Le</button>
-    <button class={ButtonOutline()}>Rig</button>
+    <button class={ButtonOutline({ isDark: $isDark })}>Le</button>
+    <button class={ButtonOutline({ isDark: $isDark })}>Rig</button>
   </div>
 </section>
 

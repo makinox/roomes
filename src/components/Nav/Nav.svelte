@@ -1,17 +1,22 @@
 <script lang="ts">
+  import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+  import { faHome, faAdjust } from '@fortawesome/free-solid-svg-icons';
   import { FluidContainer, TopBar } from '@makinox/makinox-ui';
   import { library } from '@fortawesome/fontawesome-svg-core';
-  import { faHome } from '@fortawesome/free-solid-svg-icons';
-  import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
+
+  import { isDark } from '../../data/store';
 
   library.add(faHome);
 </script>
 
 <header class={FluidContainer()}>
-  <nav class={`flex justify-between ${TopBar()}`}>
+  <nav class={`flex justify-between ${TopBar({ isDark: $isDark })}`}>
     <div>
       <span>Roomes</span>
+      <span on:click={isDark.toggle}>
+        <FontAwesomeIcon icon={faAdjust} />
+      </span>
     </div>
 
     <div>
@@ -31,7 +36,9 @@
     padding: 10px;
   }
 
-  nav div:last-of-type a {
+  nav div:last-of-type a,
+  nav div:first-of-type span:last-of-type {
+    cursor: pointer;
     color: red;
   }
 </style>

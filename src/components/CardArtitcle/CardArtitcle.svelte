@@ -1,10 +1,12 @@
 <script>
   import { Card } from '@makinox/makinox-ui';
 
+  import { isDark } from '../../data/store';
+
   export let title = 'pan';
 </script>
 
-<article class={Card({ css: { maxWidth: '290px', width: '100%' } })}>
+<article class={Card({ isDark: $isDark, css: { maxWidth: '290px', width: '100%' } })}>
   <div class="card-header">
     <h6>{title}</h6>
     <span class="subtitle1">secondary</span>
@@ -17,6 +19,5 @@
 <style>
   article {
     margin: 10px;
-    background-color: aqua;
   }
 </style>
