@@ -1,24 +1,37 @@
 <script lang="ts">
-  import { FluidContainer } from '@makinox/makinox-ui';
+  import { FluidContainer, TopBar } from '@makinox/makinox-ui';
+  import { library } from '@fortawesome/fontawesome-svg-core';
+  import { faHome } from '@fortawesome/free-solid-svg-icons';
+  import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
+
+  library.add(faHome);
 </script>
 
 <header class={FluidContainer()}>
-  <nav class="flex justify-between">
+  <nav class={`flex justify-between ${TopBar()}`}>
     <div>
       <span>Roomes</span>
     </div>
 
     <div>
-      <span>Ho</span>
-      <span>lin</span>
-      <span>back</span>
+      <a target="_blank" rel="noopener noreferrer" href="https://jesusbossa.dev"> <FontAwesomeIcon icon={faHome} /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox"><FontAwesomeIcon icon={faTwitter} /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/"><FontAwesomeIcon icon={faLinkedin} /></a>
     </div>
   </nav>
 </header>
 
 <style>
+  header {
+    padding-top: 10px;
+  }
   nav {
-    margin-top: 10px;
-    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  nav div:last-of-type a {
+    color: red;
   }
 </style>

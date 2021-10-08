@@ -17,6 +17,10 @@
     "build": "parcel build config/index.html"
   },
   "dependencies": {
-    "@makinox/makinox-ui": "^1.5.2"
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@makinox/makinox-ui": "^1.5.2",
+    "fontawesome-svelte": "^2.0.1"
   }
 }
