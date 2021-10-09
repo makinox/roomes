@@ -31,6 +31,8 @@
   article img {
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
+    height: 163px;
+    width: 290px;
   }
 
   article .card-body p {
