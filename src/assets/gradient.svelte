@@ -1,6 +1,5 @@
 <script lang="ts">
   import { getRandomNumber } from '../utils/getRandomNumber';
-  import colors from '../data/colors.json';
   import { isDark } from '../data/store';
 
   const canvasWidth = `${window.outerWidth}px`;

@@ -22,10 +22,23 @@
       },
     },
   });
+
+  const sectionTheme = css({
+    variants: {
+      isDark: {
+        true: {
+          backgroundColor: 'rgba(var(--dark-background), 0.8) !important',
+        },
+        false: {
+          backgroundColor: 'rgba(var(--light-background), 0.4) !important',
+        },
+      },
+    },
+  });
 </script>
 
 <header class={FluidContainer()}>
-  <nav class={`flex justify-between ${TopBar({ isDark: $isDark })}`}>
+  <nav class={`flex justify-between ${TopBar({ isDark: $isDark })} ${sectionTheme({ isDark: $isDark })}`}>
     <div>
       <span>Roomes</span>
       <span class={linkTheme({ isDark: $isDark })} on:click={isDark.toggle}>

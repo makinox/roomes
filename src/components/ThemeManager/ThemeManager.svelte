@@ -15,11 +15,9 @@
     variants: {
       isDark: {
         true: {
-          /* backgroundColor: 'rgb(var(--dark-surface))', */
           color: 'rgb(var(--dark-onSurface))',
         },
         false: {
-          /* backgroundColor: 'rgb(var(--light-surface))', */
           color: 'rgb(var(--light-onSurface))',
         },
       },
