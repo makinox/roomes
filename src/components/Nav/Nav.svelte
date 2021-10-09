@@ -67,5 +67,7 @@
   nav {
     border-radius: 20px;
     padding: 10px;
+    width: 97vw;
+    max-width: 100%;
   }
 </style>

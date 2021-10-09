@@ -33,7 +33,8 @@
     box-shadow: rgb(0 0 0 / 3%) 3px 3px 10px 3px;
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    margin-top: 10px;
+    margin: 0 5px;
+    margin-top: 40px;
     flex-wrap: wrap;
     padding: 20px;
   }

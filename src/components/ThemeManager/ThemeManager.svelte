@@ -25,6 +25,6 @@
   });
 </script>
 
-<main class={theme({ isDark: $isDark })}>
+<main class={`flex items-center flex-col ${theme({ isDark: $isDark })}`}>
   <slot />
 </main>
