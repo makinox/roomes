@@ -3,6 +3,8 @@
 
   let color1 = '#000000';
   let color2 = '#ffffff';
+  const canvasWidth = `${window.outerWidth}px`;
+  const canvasHeight = `${window.outerHeight}px`;
 
   const random = getRandomNumber(1, 4);
   console.log({ random });
@@ -10,10 +12,10 @@
 
 <svg
   id="visual"
-  viewBox="0 0 960 540"
+  viewBox="0 0 1060 570"
   class={$$props.class}
-  width={window.outerWidth}
-  height={window.outerHeight - 65}
+  width={canvasWidth}
+  height={canvasHeight}
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
@@ -25,7 +27,7 @@
       <feGaussianBlur stdDeviation="163" result="effect1_foregroundBlur" />
     </filter>
   </defs>
-  <rect width={window.outerWidth} height={window.outerHeight - 65} fill={color1} />
+  <rect width={canvasWidth} height={canvasHeight} fill={color1} />
   <g filter="url(#blur1)">
     {#if random === 1}
       <circle cx="845" cy="356" fill={color2} r="363" />
