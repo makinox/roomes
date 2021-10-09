@@ -7,7 +7,7 @@
 
 <section class={`flex justify-center ${FluidContainer()}`}>
   {#each dbCards as card}
-    <CardArtitcle title={card.name} />
+    <CardArtitcle title={card.name} description={card.description} image={card.imageSmall} link={card.link} />
   {/each}
 </section>
 
