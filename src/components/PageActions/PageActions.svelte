@@ -14,6 +14,9 @@
 </section>
 
 <style>
+  section {
+    padding-bottom: 100px;
+  }
   section div {
     background-color: rgba(var(--light-background), 1);
     box-shadow: rgb(0 0 0 / 3%) 3px 3px 10px 3px;

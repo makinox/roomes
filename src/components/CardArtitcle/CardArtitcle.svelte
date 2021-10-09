@@ -20,7 +20,7 @@
     <p class="body2">{description}</p>
   </div>
   <div class="card-bottom">
-    <button class={ButtonText({ isDark })} onClick={() => window.open(link, '_blank')}>open</button>
+    <button class={ButtonText({ isDark: $isDark })} on:click={() => window.open(link, '_blank')}>open</button>
   </div>
 </article>
 
@@ -29,7 +29,14 @@
     margin: 10px;
   }
   article img {
-    border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  article .card-body p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 260px;
   }
 </style>
