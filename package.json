@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@tsconfig/svelte": "^2.0.1",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-svelte": "^4.0.9",
@@ -17,7 +18,6 @@
     "build": "parcel build config/index.html"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@makinox/makinox-ui": "^1.5.2",

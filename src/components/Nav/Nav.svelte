@@ -2,12 +2,9 @@
   import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   import { faHome, faAdjust } from '@fortawesome/free-solid-svg-icons';
   import { FluidContainer, TopBar } from '@makinox/makinox-ui';
-  import { library } from '@fortawesome/fontawesome-svg-core';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
 
   import { isDark } from '../../data/store';
-
-  library.add(faHome);
 </script>
 
 <header class={FluidContainer()}>

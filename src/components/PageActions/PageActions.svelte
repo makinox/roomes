@@ -1,20 +1,26 @@
 <script lang="ts">
-  import { ButtonOutline } from '@makinox/makinox-ui';
+  import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+  import { FontAwesomeIcon } from 'fontawesome-svelte';
+  import { ButtonText } from '@makinox/makinox-ui';
 
   import { isDark } from '../../data/store';
 </script>
 
 <section class="flex justify-center">
   <div class="flex justify-between">
-    <button class={ButtonOutline({ isDark: $isDark })}>Le</button>
-    <button class={ButtonOutline({ isDark: $isDark })}>Rig</button>
+    <button class={ButtonText({ isDark: $isDark })}> <FontAwesomeIcon icon={faArrowLeft} /> </button>
+    <button class={ButtonText({ isDark: $isDark })}> <FontAwesomeIcon icon={faArrowRight} /> </button>
   </div>
 </section>
 
 <style>
   section div {
-    border: 1px solid blue;
-    width: 300px;
+    background-color: rgba(var(--light-background), 1);
+    box-shadow: rgb(0 0 0 / 3%) 3px 3px 10px 3px;
+    backdrop-filter: blur(2px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 200px;
   }
 
   section div button {
