@@ -3,23 +3,46 @@
   import { faHome, faAdjust } from '@fortawesome/free-solid-svg-icons';
   import { FluidContainer, TopBar } from '@makinox/makinox-ui';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
+  import { css } from '@stitches/core';
 
   import { isDark } from '../../data/store';
+
+  const linkTheme = css({
+    cursor: 'pointer',
+    padding: '0 1px',
+
+    variants: {
+      isDark: {
+        true: {
+          color: 'rgb(var(--dark-primary))',
+        },
+        false: {
+          color: 'rgb(var(--light-primary))',
+        },
+      },
+    },
+  });
 </script>
 
 <header class={FluidContainer()}>
   <nav class={`flex justify-between ${TopBar({ isDark: $isDark })}`}>
     <div>
       <span>Roomes</span>
-      <span on:click={isDark.toggle}>
+      <span class={linkTheme({ isDark: $isDark })} on:click={isDark.toggle}>
         <FontAwesomeIcon icon={faAdjust} />
       </span>
     </div>
 
     <div>
-      <a target="_blank" rel="noopener noreferrer" href="https://jesusbossa.dev"> <FontAwesomeIcon icon={faHome} /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox"><FontAwesomeIcon icon={faTwitter} /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/"><FontAwesomeIcon icon={faLinkedin} /></a>
+      <a class={linkTheme({ isDark: $isDark })} target="_blank" rel="noopener noreferrer" href="https://jesusbossa.dev">
+        <FontAwesomeIcon icon={faHome} /></a
+      >
+      <a class={linkTheme({ isDark: $isDark })} target="_blank" rel="noopener noreferrer" href="https://twitter.com/jesMakinox"
+        ><FontAwesomeIcon icon={faTwitter} /></a
+      >
+      <a class={linkTheme({ isDark: $isDark })} target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/makinox/"
+        ><FontAwesomeIcon icon={faLinkedin} /></a
+      >
     </div>
   </nav>
 </header>
@@ -31,11 +54,5 @@
   nav {
     border-radius: 20px;
     padding: 10px;
-  }
-
-  nav div:last-of-type a,
-  nav div:first-of-type span:last-of-type {
-    cursor: pointer;
-    color: red;
   }
 </style>
