@@ -20,4 +20,5 @@ body {
   line-height: 1.5;
   position: relative;
   background-color: rgb(var(--light-surface));
+  color: rgb(var(--light-onSurface));
 }

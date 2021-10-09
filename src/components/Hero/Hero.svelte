@@ -5,7 +5,7 @@
 
 <section class={FluidContainer()}>
   <h1>Hola buenas tardes</h1>
-  <Gradient class="hero-gradient" />
+  <!-- <Gradient class="hero-gradient" /> -->
 </section>
 
 <style>
