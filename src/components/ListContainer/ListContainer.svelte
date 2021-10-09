@@ -2,21 +2,13 @@
   import { FluidContainer } from '@makinox/makinox-ui';
 
   import CardArtitcle from '../CardArtitcle/CardArtitcle.svelte';
+  import dbCards from '../../data/db.json';
 </script>
 
 <section class={`flex justify-center ${FluidContainer()}`}>
-  <CardArtitcle title="Panela" />
-  <CardArtitcle title="Sal" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
-  <CardArtitcle title="Carton" />
+  {#each dbCards as card}
+    <CardArtitcle title={card.name} />
+  {/each}
 </section>
 
 <style>
