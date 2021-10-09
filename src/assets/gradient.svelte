@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { getRandomNumber } from '../utils/getRandomNumber';
+
   let color1 = '#000000';
   let color2 = '#ffffff';
 
-  const random = Math.floor(Math.random() * (4 - 1)) + 1;
+  const random = getRandomNumber(1, 4);
   console.log({ random });
 </script>
 
