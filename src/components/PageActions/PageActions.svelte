@@ -18,7 +18,7 @@
     padding-bottom: 100px;
   }
   section div {
-    background-color: rgba(var(--light-background), 1);
+    background-color: rgba(var(--light-background), 0.1);
     box-shadow: rgb(0 0 0 / 3%) 3px 3px 10px 3px;
     backdrop-filter: blur(2px);
     border-bottom-left-radius: 20px;

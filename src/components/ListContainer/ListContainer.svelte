@@ -11,14 +11,20 @@
   {/each}
 </section>
 
+<div />
+
 <style>
   section {
-    background-color: rgba(var(--light-background), 1);
+    background-color: rgba(var(--light-background), 0.1);
     box-shadow: rgb(0 0 0 / 3%) 3px 3px 10px 3px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     border-radius: 20px;
     margin-top: 10px;
     flex-wrap: wrap;
     padding: 20px;
+  }
+
+  div {
+    padding-bottom: 100px;
   }
 </style>
