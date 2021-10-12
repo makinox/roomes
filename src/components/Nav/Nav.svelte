@@ -4,6 +4,7 @@
   import { FluidContainer, TopBar } from '@makinox/makinox-ui';
   import { FontAwesomeIcon } from 'fontawesome-svelte';
   import { css } from '@stitches/core';
+  import Logo from '../../assets/Logo.svelte';
 
   import { isDark } from '../../data/store';
 
@@ -40,7 +41,8 @@
 <header class={FluidContainer()}>
   <nav class={`flex justify-between ${TopBar({ isDark: $isDark })} ${sectionTheme({ isDark: $isDark })}`}>
     <div>
-      <span>Roomes</span>
+      <span> <Logo /> </span>
+      <span>oomes</span>
       <span class={linkTheme({ isDark: $isDark })} on:click={isDark.toggle}>
         <FontAwesomeIcon icon={faAdjust} />
       </span>
@@ -69,5 +71,9 @@
     padding: 10px;
     width: 97vw;
     max-width: 100%;
+  }
+
+  nav > div:first-of-type > span:first-of-type {
+    height: 12px;
   }
 </style>

@@ -23,7 +23,7 @@
 
 <svg
   id="visual"
-  viewBox="0 0 1060 570"
+  viewBox={`0 0 ${canvasWidth} ${canvasHeight}`}
   class={$$props.class}
   width={canvasWidth}
   height={canvasHeight}
