@@ -6,11 +6,6 @@
   let canvasHeight = `1032px`;
 
   const isLimited = window.innerWidth < 670
-  if (isLimited) {
-    canvasWidth = `${window.innerWidth}px`
-    canvasHeight = `${window.innerHeight}px`
-  }
-
   const random = getRandomNumber(1, 4);
 
   let colorBack = 'rgb(var(--light-background))';
@@ -29,7 +24,7 @@
 
 <svg
   id="visual"
-  viewBox={`0 0 ${isLimited ? canvasHeight +' '+ canvasWidth : '1060 570'}`}
+  viewBox={`0 0 ${isLimited ? window.innerHeight +' '+ window.innerWidth : '1060 570'}`}
   class={$$props.class}
   width={canvasWidth}
   height={canvasHeight}
