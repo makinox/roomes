@@ -2,8 +2,13 @@
   import { getRandomNumber } from '../utils/getRandomNumber';
   import { isDark } from '../data/store';
 
-  const canvasWidth = `1920px`;
-  const canvasHeight = `1032px`;
+  let canvasWidth = `1920px`;
+  let canvasHeight = `1032px`;
+
+  if (window.outerWidth < 670 ) {
+    canvasWidth = `${window.outerWidth}px`
+    canvasHeight = `${window.outerHeight}px`
+  }
 
   const random = getRandomNumber(1, 4);
 
@@ -23,7 +28,7 @@
 
 <svg
   id="visual"
-  viewBox="0 0 1060 570"
+  viewBox={`0 0 ${window.outerWidth} ${window.outerHeight}`}
   class={$$props.class}
   width={canvasWidth}
   height={canvasHeight}
