@@ -24,7 +24,7 @@
 
 <svg
   id="visual"
-  viewBox={`0 0 ${isLimited ? window.innerHeight +' '+ window.innerWidth : '1060 570'}`}
+  viewBox={`0 0 ${isLimited ? canvasHeight +' '+ canvasWidth : '1060 570'}`}
   class={$$props.class}
   width={canvasWidth}
   height={canvasHeight}
