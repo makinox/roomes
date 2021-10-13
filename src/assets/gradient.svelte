@@ -4,8 +4,9 @@
 
   let canvasWidth = `1920px`;
   let canvasHeight = `1032px`;
-
-  if (window.outerWidth < 670 ) {
+  
+  const isLimited = window.outerWidth < 670
+  if (isLimited) {
     canvasWidth = `${window.outerWidth}px`
     canvasHeight = `${window.outerHeight}px`
   }
@@ -28,7 +29,7 @@
 
 <svg
   id="visual"
-  viewBox={`0 0 ${window.outerWidth} ${window.outerHeight}`}
+  viewBox={`0 0 ${isLimited ? canvasWidth +' '+ canvasHeight : '1060 570'}`}
   class={$$props.class}
   width={canvasWidth}
   height={canvasHeight}
